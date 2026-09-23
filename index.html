@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>A Little Surprise For You ❤️</title>
+
+<style>
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe6ef,
+            #fff5f8,
+            #ffeaf2
+        );
+
+    color: #444;
+    overflow-x: hidden;
+}
+
+
+/* Floating hearts */
+
+.heart {
+    position: fixed;
+    bottom: -50px;
+    font-size: 25px;
+    animation: floatUp 8s linear infinite;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.heart:nth-child(1) {
+    left: 10%;
+}
+
+.heart:nth-child(2) {
+    left: 30%;
+    animation-delay: 2s;
+}
+
+.heart:nth-child(3) {
+    left: 55%;
+    animation-delay: 4s;
+}
+
+.heart:nth-child(4) {
+    left: 80%;
+    animation-delay: 1s;
+}
+
+@keyframes floatUp {
+
+    0% {
+        transform: translateY(0);
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 0.8;
+    }
+
+    100% {
+        transform: translateY(-110vh);
+        opacity: 0;
+    }
+}
+
+
+/* Main card */
+
+.container {
+
+    width: 92%;
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    background: rgba(255,255,255,0.95);
+
+    border-radius: 30px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 45px rgba(200,80,120,0.18);
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* Heart */
+
+.big-heart {
+
+    font-size: 75px;
+
+    animation: heartbeat 1.5s infinite;
+
+}
+
+
+@keyframes heartbeat {
+
+    0% {
+        transform: scale(1);
+    }
+
+    25% {
+        transform: scale(1.15);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+
+    60% {
+        transform: scale(1.12);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+
+}
+
+
+h1 {
+
+    color: #d6336c;
+
+    font-size: 34px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.subtitle {
+
+    color: #888;
+
+    font-size: 17px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* Buttons */
+
+button {
+
+    border: none;
+
+    background: #d6336c;
+
+    color: white;
+
+    padding: 15px 28px;
+
+    border-radius: 30px;
+
+    font-size: 16px;
+
+    cursor: pointer;
+
+    margin: 10px;
+
+    transition: 0.3s;
+
+}
+
+
+button:hover {
+
+    transform: scale(1.06);
+
+    background: #b82b5b;
+
+}
+
+
+/* Message */
+
+.message {
+
+    background: #fff7fa;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    margin-top: 25px;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+    display: none;
+
+    animation: fadeIn 1s;
+
+}
+
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+.highlight {
+
+    color: #d6336c;
+
+    font-weight: bold;
+
+}
+
+
+/* Countdown */
+
+.countdown {
+
+    margin-top: 30px;
+
+    padding: 25px;
+
+    background: #ffe3ec;
+
+    border-radius: 20px;
+
+    color: #b02a55;
+
+    font-size: 20px;
+
+}
+
+
+.count-number {
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    color: #d6336c;
+
+    margin: 10px;
+
+}
+
+
+/* Reasons */
+
+.reasons {
+
+    display: none;
+
+    margin-top: 25px;
+
+    background: #fff7fa;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    animation: fadeIn 1s;
+
+}
+
+
+.reason {
+
+    margin: 15px 0;
+
+    font-size: 18px;
+
+}
+
+
+/* Gift */
+
+.gift {
+
+    font-size: 75px;
+
+    cursor: pointer;
+
+    transition: 0.4s;
+
+    margin-top: 20px;
+
+}
+
+
+.gift:hover {
+
+    transform: scale(1.15) rotate(5deg);
+
+}
+
+
+.secret {
+
+    display: none;
+
+    margin-top: 20px;
+
+    background: #ffe3ec;
+
+    border-radius: 20px;
+
+    padding: 25px;
+
+    color: #a72852;
+
+    line-height: 1.8;
+
+    animation: fadeIn 1s;
+
+}
+
+
+.footer {
+
+    margin-top: 35px;
+
+    color: #999;
+
+    font-size: 14px;
+
+}
+
+
+@media (max-width: 600px) {
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    h1 {
+        font-size: 28px;
+    }
+
+    .big-heart {
+        font-size: 60px;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="heart">❤️</div>
+<div class="heart">💕</div>
+<div class="heart">💗</div>
+<div class="heart">💖</div>
+
+
+<div class="container">
+
+
+<div class="big-heart">
+❤️
+</div>
+
+
+<h1>
+A Little Surprise For You
+</h1>
+
+
+<p class="subtitle">
+
+Your birthday is still a little far away...
+
+<br>
+
+But I couldn't wait to start.
+
+</p>
+
+
+<button onclick="openSurprise()">
+
+💌 Open My Surprise
+
+</button>
+
+
+<div id="message" class="message">
+
+<p>
+Hi Love ❤️
+</p>
+
+
+<p>
+
+I know your birthday is still
+<span class="highlight">
+a little far away
+</span>...
+
+but I wanted to start celebrating
+you before the actual day.
+
+</p>
+
+
+<p>
+
+So from today, I'm starting
+a little journey just for you.
+
+</p>
+
+
+<p>
+
+There will be little messages,
+memories, surprises,
+and maybe a few things
+you won't see coming. 😉
+
+</p>
+
+
+<p>
+
+You won't know when the next
+surprise is coming...
+
+and that's part of the fun.
+
+</p>
+
+
+<p>
+
+All I want is to make the days
+leading up to
+
+<span class="highlight">
+November 23 ❤️
+</span>
+
+a little more special.
+
+</p>
+
+
+<p>
+
+Because your birthday isn't
+just another day to me.
+
+<br><br>
+
+It's the day the person I love
+came into this world. ❤️
+
+</p>
+
+</div>
+
+
+<div class="countdown">
+
+🎂
+
+<br>
+
+<span id="countNumber"
+class="count-number">
+
+</span>
+
+<br>
+
+until your special day ❤️
+
+</div>
+
+
+<button onclick="showReasons()">
+
+💖 Why I Love You
+
+</button>
+
+
+<div id="reasons" class="reasons">
+
+<div class="reason">
+❤️ Because you make ordinary days special.
+</div>
+
+<div class="reason">
+🥰 Because I can be completely myself with you.
+</div>
+
+<div class="reason">
+💕 Because your presence feels like home.
+</div>
+
+<div class="reason">
+😊 Because your smile can change my whole day.
+</div>
+
+<div class="reason">
+❤️ Because life feels better with you beside me.
+</div>
+
+<div class="reason">
+💍 And because I choose you,
+again and again.
+</div>
+
+</div>
+
+
+<h2 style="color:#d6336c; margin-top:40px;">
+
+🎁 One More Little Surprise
+
+</h2>
+
+
+<p>
+There is something hidden here...
+</p>
+
+
+<div class="gift"
+onclick="openGift()">
+
+🎁
+
+</div>
+
+
+<div id="secret"
+class="secret">
+
+<strong>
+You found it! ❤️
+</strong>
+
+<br><br>
+
+Here's your secret message:
+
+<br><br>
+
+No matter how many birthdays
+we celebrate together...
+
+<br><br>
+
+I hope I get to be beside you
+for every single one of them.
+
+❤️
+
+<br><br>
+
+This is only the beginning...
+
+<br><br>
+
+<strong>
+I love you. ❤️
+</strong>
+
+</div>
+
+
+<div class="footer">
+
+Made with ❤️ especially for you
+
+<br><br>
+
+Love,
+
+<br>
+
+Hema ❤️
+
+</div>
+
+
+</div>
+
+
+<script>
+
+
+/* Birthday countdown */
+
+function updateCountdown() {
+
+    const today = new Date();
+
+    let birthday =
+        new Date(today.getFullYear(), 10, 23);
+
+    if (birthday < today) {
+
+        birthday =
+            new Date(
+                today.getFullYear() + 1,
+                10,
+                23
+            );
+
+    }
+
+    const difference =
+        birthday - today;
+
+    const days =
+        Math.ceil(
+            difference /
+            (1000 * 60 * 60 * 24)
+        );
+
+
+    const count =
+        document.getElementById(
+            "countNumber"
+        );
+
+
+    if (days === 0) {
+
+        count.innerHTML =
+            "🎉 Today is your birthday! 🎂❤️";
+
+    }
+
+    else if (days === 1) {
+
+        count.innerHTML =
+            "🎂 Only 1 day to go! ❤️";
+
+    }
+
+    else {
+
+        count.innerHTML =
+            days + " days to go! ❤️";
+
+    }
+
+}
+
+
+updateCountdown();
+
+
+/* Open love message */
+
+function openSurprise() {
+
+    const message =
+        document.getElementById(
+            "message"
+        );
+
+    message.style.display =
+        "block";
+
+    message.scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+/* Show reasons */
+
+function showReasons() {
+
+    const reasons =
+        document.getElementById(
+            "reasons"
+        );
+
+    if (
+        reasons.style.display ===
+        "block"
+    ) {
+
+        reasons.style.display =
+            "none";
+
+    }
+
+    else {
+
+        reasons.style.display =
+            "block";
+
+        reasons.scrollIntoView({
+            behavior: "smooth"
+        });
+
+    }
+
+}
+
+
+/* Open gift */
+
+function openGift() {
+
+    const secret =
+        document.getElementById(
+            "secret"
+        );
+
+    secret.style.display =
+        "block";
+
+    secret.scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
+
+
+</script>
+
+
+</body>
+
+</html>
