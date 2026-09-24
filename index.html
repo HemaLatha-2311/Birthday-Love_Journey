@@ -709,6 +709,79 @@ h1 {
     margin: 0;
 }
 
+/* =========================
+   MEMORY BOX
+   ========================= */
+
+.memory-box {
+    display: none;
+
+    margin-top: 20px;
+
+    padding: 20px;
+
+    background: #fff0f5;
+
+    border-radius: 20px;
+
+    line-height: 1.8;
+
+    animation: fadeIn 0.8s;
+}
+
+.memory-box h4 {
+    color: #d6336c;
+
+    font-size: 22px;
+
+    margin: 20px 0 10px;
+}
+
+.memory-box p {
+    color: #666;
+
+    line-height: 1.8;
+}
+
+.memory-box strong {
+    color: #d6336c;
+
+    font-size: 17px;
+}
+
+.memory-photo {
+    width: 100%;
+
+    min-height: 220px;
+
+    border-radius: 18px;
+
+    background: #ffe3ec;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-direction: column;
+
+    font-size: 55px;
+
+    color: #d6336c;
+
+    border: 2px dashed #ffb6c1;
+}
+
+.memory-photo span {
+    font-size: 14px;
+
+    color: #999;
+
+    margin-top: 8px;
+}
+
+      
       
 </style>
 
@@ -1130,6 +1203,8 @@ I love you, Muu.
 
 </div>
 
+
+      
 <!-- =========================
      OUR STORY
      ========================= -->
@@ -1139,14 +1214,17 @@ I love you, Muu.
     <h2>Our Story ❤️</h2>
 
     <p class="story-intro">
-        Every beautiful story has a beginning...
-        and ours is my favorite. ❤️
+        Some dates are just dates...
+        but these dates are pieces of our story. ❤️
     </p>
 
 
     <div class="timeline">
 
-        <!-- OUR BEGINNING -->
+
+        <!-- =========================
+             AUGUST 28, 2023
+             ========================= -->
 
         <div class="timeline-item">
 
@@ -1165,22 +1243,68 @@ I love you, Muu.
                 </h3>
 
                 <p>
-                    This was the beginning of our beautiful
-                    journey.
-
-                    Two people slowly became something
-                    much more special.
-
-                    And from that day, my heart started
-                    choosing you again and again. ❤️
+                    The beginning of us...
                 </p>
+
+                <button onclick="openMemory('memory2023')">
+                    💌 Open Our Memory ❤️
+                </button>
+
+
+                <div id="memory2023"
+                     class="memory-box">
+
+                    <div class="memory-photo">
+                        📸
+                        <br>
+                        <span>
+                            Our first memory
+                        </span>
+                    </div>
+
+                    <h4>
+                        August 28, 2023 ❤️
+                    </h4>
+
+                    <p>
+                        This is where our story began.
+
+                        What started as two people
+                        became something much more
+                        beautiful.
+
+                        From that day, we started creating
+                        memories, sharing laughs, supporting
+                        each other and slowly building
+                        our little world together.
+
+                        I didn't know exactly where our
+                        journey would take us...
+
+                        but I'm so happy it brought me
+                        to you. ❤️
+                    </p>
+
+                    <p>
+                        And if I could go back to that day,
+                        I would still choose you.
+                    </p>
+
+                    <strong>
+                        Always you, Muu. ❤️
+                    </strong>
+
+                </div>
 
             </div>
 
         </div>
 
 
-        <!-- WEDDING -->
+
+        <!-- =========================
+             APRIL 6, 2026
+             ========================= -->
 
         <div class="timeline-item">
 
@@ -1191,28 +1315,156 @@ I love you, Muu.
             <div class="timeline-content">
 
                 <span class="timeline-date">
-                    May 28, 2026
+                    April 6, 2026
                 </span>
 
                 <h3>
-                    The Day We Became One 💍
+                    Our Engagement Day 💍
                 </h3>
 
                 <p>
-                    Our love story became a new chapter.
-
-                    We didn't just promise to love each other,
-                    we promised to walk through life together.
-
-                    My favorite "yes" was becoming your wife. ❤️
+                    The day our forever became even more real.
                 </p>
+
+                <button onclick="openMemory('memoryEngagement')">
+                    💌 Open Our Memory ❤️
+                </button>
+
+
+                <div id="memoryEngagement"
+                     class="memory-box">
+
+                    <div class="memory-photo">
+                        📸
+                        <br>
+                        <span>
+                            Our Engagement Photo
+                        </span>
+                    </div>
+
+                    <h4>
+                        April 6, 2026 💍❤️
+                    </h4>
+
+                    <p>
+                        This was such a special day for us.
+
+                        After everything we had shared,
+                        we took another beautiful step
+                        towards our future together.
+
+                        Seeing you beside me that day
+                        made everything feel real.
+
+                        Our relationship wasn't just about
+                        yesterday anymore...
+
+                        We were getting ready to build
+                        our tomorrow together. ❤️
+                    </p>
+
+                    <p>
+                        One promise.
+
+                        One beautiful beginning
+                        to our forever.
+                    </p>
+
+                    <strong>
+                        My fiancé then,
+                        my husband now. ❤️
+                    </strong>
+
+                </div>
 
             </div>
 
         </div>
 
 
-        <!-- BIRTHDAY -->
+
+        <!-- =========================
+             MAY 28, 2026
+             ========================= -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-heart">
+                👰
+            </div>
+
+            <div class="timeline-content">
+
+                <span class="timeline-date">
+                    May 28, 2026
+                </span>
+
+                <h3>
+                    The Day We Became One 💍❤️
+                </h3>
+
+                <p>
+                    The day I became your wife.
+                </p>
+
+                <button onclick="openMemory('memoryWedding')">
+                    💌 Open Our Memory ❤️
+                </button>
+
+
+                <div id="memoryWedding"
+                     class="memory-box">
+
+                    <div class="memory-photo">
+                        📸
+                        <br>
+                        <span>
+                            Our Wedding Photo
+                        </span>
+                    </div>
+
+                    <h4>
+                        May 28, 2026 💍❤️
+                    </h4>
+
+                    <p>
+                        Our wedding day.
+
+                        A day we had dreamed about,
+                        waited for and finally got to live.
+
+                        From being two people with a story...
+
+                        to becoming husband and wife.
+
+                        I will always remember the feeling
+                        of that day and the happiness of
+                        starting this new chapter with you.
+                    </p>
+
+                    <p>
+                        Our story didn't end here.
+
+                        This was only the beginning
+                        of our forever. ❤️
+                    </p>
+
+                    <strong>
+                        Husband & Wife.
+                        Always and forever. ❤️
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             NOVEMBER 23, 2026
+             ========================= -->
 
         <div class="timeline-item">
 
@@ -1227,26 +1479,21 @@ I love you, Muu.
                 </span>
 
                 <h3>
-                    Your Special Day 🎉
+                    Your Special Day 🎂❤️
                 </h3>
 
                 <p>
                     The day the person I love was born.
-
-                    Happy Birthday in advance, Muu. ❤️
-
-                    I hope this little journey reminds you
-                    how deeply you are loved.
                 </p>
 
             </div>
 
         </div>
 
+
     </div>
 
 </section>
-
       
 
 <!-- =========================
@@ -1674,7 +1921,35 @@ function openGift() {
 
 }
 
+/* =========================
+   OPEN OUR MEMORY
+   ========================= */
 
+function openMemory(memoryId) {
+
+    const memory =
+        document.getElementById(memoryId);
+
+    if (memory.style.display === "block") {
+
+        memory.style.display = "none";
+
+    }
+
+    else {
+
+        memory.style.display = "block";
+
+        memory.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }
+
+}
+
+      
 </script>
 
 
