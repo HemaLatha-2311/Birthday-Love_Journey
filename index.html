@@ -1057,68 +1057,21 @@ until your special day ❤️
 
 <!-- LOVE REASONS -->
 
-
 <button onclick="showReasons()">
-
-💖 Why I Love You
-
+    💖 Why I Love You
 </button>
 
+<div id="reasons" class="reasons">
 
-<div id="reasons"
-     class="reasons">
+    <div class="reason" id="randomReason">
+        ❤️ Click the button to discover a reason...
+    </div>
 
-
-<div class="reason">
-
-❤️ Because you make ordinary
-days special.
-
-</div>
-
-
-<div class="reason">
-
-🥰 Because I can be completely
-myself with you.
+    <button onclick="showAnotherReason()">
+        💕 Another Reason
+    </button>
 
 </div>
-
-
-<div class="reason">
-
-💕 Because your presence
-feels like home.
-
-</div>
-
-
-<div class="reason">
-
-😊 Because your smile can
-change my whole day.
-
-</div>
-
-
-<div class="reason">
-
-❤️ Because life feels better
-with you beside me.
-
-</div>
-
-
-<div class="reason">
-
-💍 And because I choose you,
-again and again.
-
-</div>
-
-
-</div>
-
 
 
 <!-- GIFT -->
@@ -1853,44 +1806,80 @@ function openMessage() {
 
 
 /* =========================
-   LOVE REASONS
+   RANDOM LOVE REASONS
    ========================= */
+
+const loveReasons = [
+
+    "❤️ Because you make ordinary days feel special.",
+
+    "🥰 Because I can be completely myself with you.",
+
+    "💕 Because your presence feels like home.",
+
+    "😊 Because your smile can change my whole day.",
+
+    "❤️ Because life feels better with you beside me.",
+
+    "💍 Because I choose you again and again.",
+
+    "🌸 Because even the smallest moments with you become memories.",
+
+    "🤗 Because somehow, you always make me feel safe.",
+
+    "💖 Because you are not just my husband, you are my favorite person.",
+
+    "🥹 Because I still get happy just knowing I get to call you mine.",
+
+    "🌎 Because no matter where life takes us, I want to experience it with you.",
+
+    "❤️ Because our story is my favorite story."
+];
+
+
+let lastReason = -1;
 
 
 function showReasons() {
 
-
     const reasons =
-        document.getElementById(
-            "reasons"
-        );
+        document.getElementById("reasons");
+
+    reasons.style.display = "block";
+
+    showAnotherReason();
+
+    reasons.scrollIntoView({
+        behavior: "smooth"
+    });
+
+}
 
 
-    if (
-        reasons.style.display ===
-        "block"
-    ) {
+function showAnotherReason() {
+
+    let randomIndex;
+
+    do {
+
+        randomIndex =
+            Math.floor(
+                Math.random() * loveReasons.length
+            );
+
+    } while (
+        randomIndex === lastReason &&
+        loveReasons.length > 1
+    );
 
 
-        reasons.style.display =
-            "none";
+    lastReason = randomIndex;
 
 
-    }
-
-    else {
-
-
-        reasons.style.display =
-            "block";
-
-
-        reasons.scrollIntoView({
-            behavior:"smooth"
-        });
-
-
-    }
+    document.getElementById(
+        "randomReason"
+    ).innerHTML =
+        loveReasons[randomIndex];
 
 }
 
