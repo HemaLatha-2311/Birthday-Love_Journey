@@ -2,10 +2,14 @@
 <html lang="en">
 
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>A Little Surprise For You ❤️</title>
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>For My Muu ❤️</title>
+
 
 <style>
 
@@ -13,104 +17,162 @@
     box-sizing: border-box;
 }
 
+
 body {
+
     margin: 0;
+
     min-height: 100vh;
+
     font-family: Arial, sans-serif;
 
     background:
         linear-gradient(
             135deg,
-            #ffe6ef,
+            #ffe4ed,
             #fff5f8,
-            #ffeaf2
+            #ffdce8
         );
 
     color: #444;
+
     overflow-x: hidden;
+
 }
 
 
-/* Floating hearts */
+/* =========================
+   FLOATING HEARTS
+   ========================= */
 
 .heart {
+
     position: fixed;
+
     bottom: -50px;
+
     font-size: 25px;
-    animation: floatUp 8s linear infinite;
+
+    animation:
+        floatUp 8s linear infinite;
+
     opacity: 0.7;
+
     pointer-events: none;
+
 }
+
 
 .heart:nth-child(1) {
+
     left: 10%;
+
 }
+
 
 .heart:nth-child(2) {
+
     left: 30%;
+
     animation-delay: 2s;
+
 }
+
 
 .heart:nth-child(3) {
+
     left: 55%;
+
     animation-delay: 4s;
+
 }
 
+
 .heart:nth-child(4) {
+
     left: 80%;
+
     animation-delay: 1s;
+
 }
+
 
 @keyframes floatUp {
 
     0% {
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
+
         opacity: 0;
+
     }
 
     20% {
+
         opacity: 0.8;
+
     }
 
     100% {
-        transform: translateY(-110vh);
+
+        transform:
+            translateY(-110vh);
+
         opacity: 0;
+
     }
+
 }
 
 
-/* Main card */
+/* =========================
+   OPENING SCREEN
+   ========================= */
 
-.container {
+#welcome {
 
-    width: 92%;
-    max-width: 700px;
+    min-height: 100vh;
 
-    margin: 50px auto;
+    display: flex;
 
-    background: rgba(255,255,255,0.95);
+    justify-content: center;
+
+    align-items: center;
+
+    padding: 25px;
+
+}
+
+
+.welcome-card {
+
+    width: 100%;
+
+    max-width: 500px;
+
+    background:
+        rgba(255,255,255,0.96);
 
     border-radius: 30px;
 
-    padding: 40px 30px;
+    padding: 45px 30px;
 
     text-align: center;
 
     box-shadow:
-        0 15px 45px rgba(200,80,120,0.18);
+        0 15px 50px
+        rgba(200,80,120,0.20);
 
-    position: relative;
-    z-index: 2;
 }
 
 
-/* Heart */
+.welcome-heart {
 
-.big-heart {
+    font-size: 80px;
 
-    font-size: 75px;
-
-    animation: heartbeat 1.5s infinite;
+    animation:
+        heartbeat 1.5s infinite;
 
 }
 
@@ -140,29 +202,60 @@ body {
 }
 
 
-h1 {
+.welcome-card h1 {
 
     color: #d6336c;
 
-    font-size: 34px;
+    font-size: 36px;
 
-    margin-bottom: 10px;
+    margin: 15px 0;
 
 }
 
 
-.subtitle {
+.welcome-card p {
 
-    color: #888;
+    color: #777;
 
     font-size: 17px;
 
-    margin-bottom: 30px;
+    line-height: 1.7;
 
 }
 
 
-/* Buttons */
+.password-box {
+
+    margin-top: 30px;
+
+}
+
+
+.password-box input {
+
+    width: 80%;
+
+    padding: 14px;
+
+    border-radius: 25px;
+
+    border: 2px solid #ffd0df;
+
+    outline: none;
+
+    text-align: center;
+
+    font-size: 17px;
+
+}
+
+
+.password-box input:focus {
+
+    border-color: #d6336c;
+
+}
+
 
 button {
 
@@ -180,7 +273,7 @@ button {
 
     cursor: pointer;
 
-    margin: 10px;
+    margin: 15px 5px;
 
     transition: 0.3s;
 
@@ -189,16 +282,96 @@ button {
 
 button:hover {
 
-    transform: scale(1.06);
+    transform: scale(1.05);
 
     background: #b82b5b;
 
 }
 
 
-/* Message */
+#error {
+
+    color: #d6336c;
+
+    margin-top: 15px;
+
+    display: none;
+
+}
+
+
+/* =========================
+   MAIN PAGE
+   ========================= */
+
+#mainPage {
+
+    display: none;
+
+}
+
+
+.container {
+
+    width: 92%;
+
+    max-width: 700px;
+
+    margin: 50px auto;
+
+    background:
+        rgba(255,255,255,0.96);
+
+    border-radius: 30px;
+
+    padding: 40px 30px;
+
+    text-align: center;
+
+    box-shadow:
+        0 15px 45px
+        rgba(200,80,120,0.18);
+
+}
+
+
+.big-heart {
+
+    font-size: 75px;
+
+    animation:
+        heartbeat 1.5s infinite;
+
+}
+
+
+h1 {
+
+    color: #d6336c;
+
+    font-size: 34px;
+
+}
+
+
+.subtitle {
+
+    color: #888;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================
+   MESSAGE
+   ========================= */
 
 .message {
+
+    display: none;
 
     background: #fff7fa;
 
@@ -212,9 +385,8 @@ button:hover {
 
     text-align: left;
 
-    display: none;
-
-    animation: fadeIn 1s;
+    animation:
+        fadeIn 1s;
 
 }
 
@@ -222,13 +394,21 @@ button:hover {
 @keyframes fadeIn {
 
     from {
+
         opacity: 0;
-        transform: translateY(20px);
+
+        transform:
+            translateY(20px);
+
     }
 
     to {
+
         opacity: 1;
-        transform: translateY(0);
+
+        transform:
+            translateY(0);
+
     }
 
 }
@@ -243,7 +423,9 @@ button:hover {
 }
 
 
-/* Countdown */
+/* =========================
+   COUNTDOWN
+   ========================= */
 
 .countdown {
 
@@ -264,18 +446,22 @@ button:hover {
 
 .count-number {
 
+    display: block;
+
     font-size: 42px;
 
     font-weight: bold;
 
     color: #d6336c;
 
-    margin: 10px;
+    margin: 12px;
 
 }
 
 
-/* Reasons */
+/* =========================
+   LOVE REASONS
+   ========================= */
 
 .reasons {
 
@@ -289,38 +475,41 @@ button:hover {
 
     padding: 25px;
 
-    animation: fadeIn 1s;
+    animation:
+        fadeIn 1s;
 
 }
 
 
 .reason {
 
-    margin: 15px 0;
+    margin: 18px 0;
 
     font-size: 18px;
 
 }
 
 
-/* Gift */
+/* =========================
+   GIFT
+   ========================= */
 
 .gift {
 
-    font-size: 75px;
+    font-size: 80px;
 
     cursor: pointer;
 
     transition: 0.4s;
-
-    margin-top: 20px;
 
 }
 
 
 .gift:hover {
 
-    transform: scale(1.15) rotate(5deg);
+    transform:
+        scale(1.15)
+        rotate(5deg);
 
 }
 
@@ -341,14 +530,54 @@ button:hover {
 
     line-height: 1.8;
 
-    animation: fadeIn 1s;
+    animation:
+        fadeIn 1s;
 
 }
 
 
+/* =========================
+   BIRTHDAY MODE
+   ========================= */
+
+#birthdayMode {
+
+    display: none;
+
+}
+
+
+.birthday-title {
+
+    font-size: 40px;
+
+    color: #d6336c;
+
+}
+
+
+.birthday-message {
+
+    background: #fff0f5;
+
+    padding: 30px;
+
+    border-radius: 25px;
+
+    line-height: 1.9;
+
+    font-size: 18px;
+
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
 .footer {
 
-    margin-top: 35px;
+    margin-top: 40px;
 
     color: #999;
 
@@ -357,18 +586,24 @@ button:hover {
 }
 
 
-@media (max-width: 600px) {
+@media(max-width:600px) {
+
+    .welcome-card {
+
+        padding: 35px 20px;
+
+    }
+
+    .welcome-card h1 {
+
+        font-size: 30px;
+
+    }
 
     .container {
+
         padding: 30px 20px;
-    }
 
-    h1 {
-        font-size: 28px;
-    }
-
-    .big-heart {
-        font-size: 60px;
     }
 
 }
@@ -381,56 +616,168 @@ button:hover {
 <body>
 
 
+<!-- FLOATING HEARTS -->
+
 <div class="heart">❤️</div>
 <div class="heart">💕</div>
 <div class="heart">💗</div>
 <div class="heart">💖</div>
 
 
-<div class="container">
+
+<!-- =========================
+     WELCOME SCREEN
+     ========================= -->
+
+<div id="welcome">
 
 
-<div class="big-heart">
+<div class="welcome-card">
+
+
+<div class="welcome-heart">
+
 ❤️
+
 </div>
 
 
 <h1>
-A Little Surprise For You
+
+For My Muu ❤️
+
+</h1>
+
+
+<p>
+
+Someone who loves you very much
+has prepared something special.
+
+<br><br>
+
+But there is one little secret...
+
+<br>
+
+Only <strong>you</strong> should be able
+to open it. 😉
+
+</p>
+
+
+<div class="password-box">
+
+
+<input
+
+    type="password"
+
+    id="password"
+
+    placeholder="Enter our special date"
+
+>
+
+
+<br>
+
+
+<button onclick="unlock()">
+
+🔐 Unlock My Surprise
+
+</button>
+
+
+<div id="error">
+
+Hmm... that's not our secret ❤️
+Try again.
+
+</div>
+
+
+</div>
+
+
+<p style="font-size:13px;color:#aaa;">
+
+Hint: ❤️ Our love story has a date...
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- =========================
+     MAIN PAGE
+     ========================= -->
+
+<div id="mainPage">
+
+
+<div class="container">
+
+
+<div class="big-heart">
+
+❤️
+
+</div>
+
+
+<h1>
+
+Hi Muu ❤️
+
 </h1>
 
 
 <p class="subtitle">
 
-Your birthday is still a little far away...
+Welcome to a little journey
+made especially for you.
 
 <br>
 
-But I couldn't wait to start.
+Your birthday may still be
+a little far away...
+
+<br>
+
+but I didn't want to wait.
 
 </p>
 
 
-<button onclick="openSurprise()">
+<button onclick="openMessage()">
 
-💌 Open My Surprise
+💌 Open My Message
 
 </button>
 
 
-<div id="message" class="message">
+<div id="message"
+     class="message">
+
 
 <p>
-Hi Love ❤️
+
+Hi Muu ❤️
+
 </p>
 
 
 <p>
 
 I know your birthday is still
-<span class="highlight">
-a little far away
-</span>...
+a little far away...
 
 but I wanted to start celebrating
 you before the actual day.
@@ -472,7 +819,9 @@ All I want is to make the days
 leading up to
 
 <span class="highlight">
+
 November 23 ❤️
+
 </span>
 
 a little more special.
@@ -488,29 +837,50 @@ just another day to me.
 <br><br>
 
 It's the day the person I love
-came into this world. ❤️
+came into this world.
+
+❤️
 
 </p>
 
+
+<p>
+
+And I'm very lucky that
+our paths crossed.
+
+❤️
+
+</p>
+
+
 </div>
+
+
+
+<!-- COUNTDOWN -->
 
 
 <div class="countdown">
 
+
 🎂
 
-<br>
 
 <span id="countNumber"
-class="count-number">
+      class="count-number">
 
 </span>
 
-<br>
 
 until your special day ❤️
 
+
 </div>
+
+
+
+<!-- LOVE REASONS -->
 
 
 <button onclick="showReasons()">
@@ -520,37 +890,66 @@ until your special day ❤️
 </button>
 
 
-<div id="reasons" class="reasons">
+<div id="reasons"
+     class="reasons">
+
 
 <div class="reason">
-❤️ Because you make ordinary days special.
+
+❤️ Because you make ordinary
+days special.
+
 </div>
 
-<div class="reason">
-🥰 Because I can be completely myself with you.
-</div>
 
 <div class="reason">
-💕 Because your presence feels like home.
+
+🥰 Because I can be completely
+myself with you.
+
 </div>
 
-<div class="reason">
-😊 Because your smile can change my whole day.
-</div>
 
 <div class="reason">
-❤️ Because life feels better with you beside me.
+
+💕 Because your presence
+feels like home.
+
 </div>
 
+
 <div class="reason">
+
+😊 Because your smile can
+change my whole day.
+
+</div>
+
+
+<div class="reason">
+
+❤️ Because life feels better
+with you beside me.
+
+</div>
+
+
+<div class="reason">
+
 💍 And because I choose you,
 again and again.
-</div>
 
 </div>
 
 
-<h2 style="color:#d6336c; margin-top:40px;">
+</div>
+
+
+
+<!-- GIFT -->
+
+
+<h2 style="color:#d6336c;margin-top:45px;">
 
 🎁 One More Little Surprise
 
@@ -558,12 +957,18 @@ again and again.
 
 
 <p>
-There is something hidden here...
+
+Something is hiding here...
+
+<br>
+
+You just have to find it.
+
 </p>
 
 
 <div class="gift"
-onclick="openGift()">
+     onclick="openGift()">
 
 🎁
 
@@ -571,39 +976,141 @@ onclick="openGift()">
 
 
 <div id="secret"
-class="secret">
+     class="secret">
+
 
 <strong>
+
 You found it! ❤️
+
 </strong>
 
-<br><br>
-
-Here's your secret message:
 
 <br><br>
+
 
 No matter how many birthdays
 we celebrate together...
 
 <br><br>
 
-I hope I get to be beside you
+
+I hope I get to stand beside you
 for every single one of them.
+
+<br><br>
+
+
+Through every happy day,
+every difficult day,
+every silly moment,
+and every adventure...
+
+<br><br>
+
+
+I want us.
 
 ❤️
 
-<br><br>
-
-This is only the beginning...
 
 <br><br>
+
 
 <strong>
-I love you. ❤️
+
+I love you, Muu.
+
+❤️
+
 </strong>
 
+
 </div>
+
+
+
+<!-- =========================
+     BIRTHDAY MODE
+     ========================= -->
+
+
+<div id="birthdayMode">
+
+
+<h1 class="birthday-title">
+
+🎉 HAPPY BIRTHDAY, MUU! 🎂
+
+</h1>
+
+
+<div class="birthday-message">
+
+
+Today there is no countdown.
+
+<br><br>
+
+Because the day we've been
+waiting for is finally here.
+
+🎂❤️
+
+
+<br><br>
+
+
+Happy Birthday to the person
+who makes my world a little
+brighter just by being in it.
+
+
+<br><br>
+
+
+I hope this year brings you
+everything your heart wishes for.
+
+
+<br><br>
+
+
+And selfishly...
+
+I hope I get to be beside you
+for all of it.
+
+❤️
+
+
+<br><br>
+
+
+From August 28, 2023...
+
+to every tomorrow ahead...
+
+
+<br><br>
+
+
+<strong>
+
+I choose you.
+
+I love you.
+
+Happy Birthday, Muu. ❤️🎂
+
+</strong>
+
+
+</div>
+
+
+</div>
+
 
 
 <div class="footer">
@@ -624,19 +1131,119 @@ Hema ❤️
 </div>
 
 
+</div>
+
+
+
 <script>
 
 
-/* Birthday countdown */
+/* =========================
+   PASSWORD
+   ========================= */
+
+
+function unlock() {
+
+
+    const entered =
+        document.getElementById(
+            "password"
+        ).value;
+
+
+    const correctPassword =
+        "28082023";
+
+
+    if (
+        entered ===
+        correctPassword
+    ) {
+
+
+        document.getElementById(
+            "welcome"
+        ).style.display =
+            "none";
+
+
+        document.getElementById(
+            "mainPage"
+        ).style.display =
+            "block";
+
+
+        window.scrollTo(0,0);
+
+
+        checkBirthday();
+
+
+    }
+
+
+    else {
+
+
+        document.getElementById(
+            "error"
+        ).style.display =
+            "block";
+
+
+    }
+
+}
+
+
+
+/* Allow Enter key */
+
+
+document
+    .getElementById("password")
+    .addEventListener(
+        "keypress",
+        function(event) {
+
+            if (
+                event.key ===
+                "Enter"
+            ) {
+
+                unlock();
+
+            }
+
+        }
+    );
+
+
+
+/* =========================
+   COUNTDOWN
+   ========================= */
+
 
 function updateCountdown() {
 
-    const today = new Date();
+
+    const today =
+        new Date();
+
 
     let birthday =
-        new Date(today.getFullYear(), 10, 23);
+        new Date(
+            today.getFullYear(),
+            10,
+            23
+        );
 
-    if (birthday < today) {
+
+    if (
+        birthday < today
+    ) {
 
         birthday =
             new Date(
@@ -647,8 +1254,10 @@ function updateCountdown() {
 
     }
 
+
     const difference =
         birthday - today;
+
 
     const days =
         Math.ceil(
@@ -663,100 +1272,186 @@ function updateCountdown() {
         );
 
 
-    if (days === 0) {
+    if (
+        days === 0
+    ) {
 
         count.innerHTML =
-            "🎉 Today is your birthday! 🎂❤️";
+            "🎉 TODAY! 🎂❤️";
 
     }
 
-    else if (days === 1) {
+    else if (
+        days === 1
+    ) {
 
         count.innerHTML =
-            "🎂 Only 1 day to go! ❤️";
+            "🎂 1 day to go! ❤️";
 
     }
 
     else {
 
         count.innerHTML =
-            days + " days to go! ❤️";
+            days +
+            " days to go! ❤️";
 
     }
 
 }
 
 
+
 updateCountdown();
 
 
-/* Open love message */
 
-function openSurprise() {
+/* =========================
+   CHECK BIRTHDAY
+   ========================= */
+
+
+function checkBirthday() {
+
+
+    const today =
+        new Date();
+
+
+    const month =
+        today.getMonth();
+
+
+    const day =
+        today.getDate();
+
+
+    if (
+        month === 10 &&
+        day === 23
+    ) {
+
+
+        document.getElementById(
+            "birthdayMode"
+        ).style.display =
+            "block";
+
+
+        document.getElementById(
+            "countNumber"
+        ).innerHTML =
+            "🎉 TODAY! 🎂❤️";
+
+
+        document
+            .getElementById(
+                "birthdayMode"
+            )
+            .scrollIntoView({
+                behavior:"smooth"
+            });
+
+
+    }
+
+}
+
+
+
+/* =========================
+   OPEN MESSAGE
+   ========================= */
+
+
+function openMessage() {
+
 
     const message =
         document.getElementById(
             "message"
         );
 
+
     message.style.display =
         "block";
 
+
     message.scrollIntoView({
-        behavior: "smooth"
+        behavior:"smooth"
     });
+
 
 }
 
 
-/* Show reasons */
+
+/* =========================
+   LOVE REASONS
+   ========================= */
+
 
 function showReasons() {
+
 
     const reasons =
         document.getElementById(
             "reasons"
         );
 
+
     if (
         reasons.style.display ===
         "block"
     ) {
 
+
         reasons.style.display =
             "none";
+
 
     }
 
     else {
 
+
         reasons.style.display =
             "block";
 
+
         reasons.scrollIntoView({
-            behavior: "smooth"
+            behavior:"smooth"
         });
+
 
     }
 
 }
 
 
-/* Open gift */
+
+/* =========================
+   GIFT
+   ========================= */
+
 
 function openGift() {
+
 
     const secret =
         document.getElementById(
             "secret"
         );
 
+
     secret.style.display =
         "block";
 
+
     secret.scrollIntoView({
-        behavior: "smooth"
+        behavior:"smooth"
     });
+
 
 }
 
