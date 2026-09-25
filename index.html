@@ -781,6 +781,142 @@ h1 {
     margin-top: 8px;
 }
 
+/* =========================
+   LOVE LETTER
+   ========================= */
+
+.love-letter-section {
+    margin-top: 55px;
+    padding: 35px 10px;
+    text-align: center;
+}
+
+.love-letter-section h2 {
+    color: #d6336c;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.letter-intro {
+    color: #777;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 25px;
+}
+
+
+/* Hidden letter */
+
+.love-letter {
+    display: none;
+
+    margin-top: 30px;
+
+    animation: fadeIn 1s;
+}
+
+
+/* Letter paper */
+
+.letter-paper {
+    max-width: 650px;
+
+    margin: auto;
+
+    padding: 35px 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffdf8,
+            #fff8f3
+        );
+
+    border-radius: 8px;
+
+    box-shadow:
+        0 10px 35px
+        rgba(150, 80, 100, 0.15);
+
+    text-align: left;
+
+    line-height: 1.9;
+
+    position: relative;
+}
+
+
+/* Little heart */
+
+.letter-decoration {
+    text-align: center;
+
+    font-size: 40px;
+
+    margin-bottom: 10px;
+}
+
+
+/* Letter title */
+
+.letter-paper h3 {
+    text-align: center;
+
+    color: #d6336c;
+
+    font-size: 26px;
+
+    margin-bottom: 25px;
+}
+
+
+/* Letter paragraphs */
+
+.letter-paper p {
+    color: #555;
+
+    font-size: 16px;
+
+    margin-bottom: 20px;
+}
+
+
+/* Important message */
+
+.letter-highlight {
+    margin: 30px 0;
+
+    padding: 25px;
+
+    text-align: center;
+
+    background: #ffe3ec;
+
+    border-radius: 20px;
+
+    color: #d6336c;
+
+    font-size: 19px;
+
+    font-weight: bold;
+
+    line-height: 1.8;
+}
+
+
+/* Signature */
+
+.letter-signature {
+    margin-top: 30px;
+
+    text-align: right;
+
+    color: #d6336c;
+
+    font-size: 18px;
+
+    font-style: italic;
+}
       
       
 </style>
@@ -1446,6 +1582,143 @@ I love you, Muu.
 
     </div>
 
+<!-- =========================
+     LOVE LETTER
+     ========================= -->
+
+<section class="love-letter-section">
+
+    <h2>💌 A Letter For You</h2>
+
+    <p class="letter-intro">
+        Some things are easier to write than to say... ❤️
+    </p>
+
+    <button onclick="openLoveLetter()">
+        💌 Read My Love Letter
+    </button>
+
+
+    <div id="loveLetter" class="love-letter">
+
+        <div class="letter-paper">
+
+            <div class="letter-decoration">
+                ❤️
+            </div>
+
+            <h3>
+                To My Muu ❤️
+            </h3>
+
+            <p>
+                My dear Muu,
+            </p>
+
+            <p>
+                I don't know if I can ever find enough
+                words to explain what you mean to me.
+            </p>
+
+            <p>
+                When I look back at our journey, I realize
+                how many little moments brought us here.
+                From the beginning of our story on
+                August 28, 2023, to our engagement,
+                and finally to the day I became your wife,
+                every chapter has become a part of my heart.
+            </p>
+
+            <p>
+                We have laughed together, dreamed together,
+                faced difficult moments together and created
+                memories that I will always carry with me.
+            </p>
+
+            <p>
+                You are not just someone I love.
+
+                You are the person I want beside me when
+                life is wonderful, when life is difficult,
+                when we are laughing over something silly,
+                and when we simply sit together without
+                saying anything.
+            </p>
+
+            <p>
+                I don't need a perfect life.
+
+                I just want our life.
+
+                With you.
+            </p>
+
+            <p>
+                And if I could choose again,
+                knowing everything I know today,
+                I would still choose you.
+            </p>
+
+            <p>
+                Every single time. ❤️
+            </p>
+
+            <p>
+                Your birthday is coming soon, but honestly,
+                I don't want to celebrate only one day.
+
+                I want to celebrate you in all the little
+                days leading up to it too.
+            </p>
+
+            <p>
+                So this little website is my tiny way of
+                saying something I hope you never forget:
+            </p>
+
+            <div class="letter-highlight">
+
+                You are deeply loved. ❤️
+
+                <br><br>
+
+                You are my favorite person.
+
+                <br><br>
+
+                And you will always have my heart.
+
+            </div>
+
+            <p>
+                Happy Birthday in advance, Muu. 🎂❤️
+            </p>
+
+            <p>
+                Here's to our story...
+
+                and to all the chapters we haven't written yet.
+            </p>
+
+            <div class="letter-signature">
+
+                Forever yours,
+
+                <br>
+
+                Hema ❤️
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+      
 </section>
       
 
@@ -1937,6 +2210,36 @@ function openMemory(memoryId) {
     }
 
 }
+
+/* =========================
+   LOVE LETTER
+   ========================= */
+
+function openLoveLetter() {
+
+    const letter =
+        document.getElementById("loveLetter");
+
+    if (letter.style.display === "block") {
+
+        letter.style.display = "none";
+
+    }
+
+    else {
+
+        letter.style.display = "block";
+
+        letter.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+        });
+
+    }
+
+}
+
+      
 
       
 </script>
