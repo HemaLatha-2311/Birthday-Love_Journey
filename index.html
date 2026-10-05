@@ -613,7 +613,7 @@ h1 {
    ========================= */
 
 .story-section {
-    margin-top: 50px;
+    margin-top: 55px;
     padding: 35px 10px;
     text-align: center;
 }
@@ -631,6 +631,9 @@ h1 {
     margin-bottom: 40px;
 }
 
+
+/* TIMELINE */
+
 .timeline {
     position: relative;
     max-width: 650px;
@@ -640,24 +643,37 @@ h1 {
 
 .timeline::before {
     content: "";
+
     position: absolute;
+
     left: 24px;
+
     top: 0;
+
     bottom: 0;
+
     width: 3px;
+
     background: #ffb6c1;
 }
 
+
 .timeline-item {
     position: relative;
+
     display: flex;
+
     gap: 20px;
-    margin-bottom: 35px;
+
+    margin-bottom: 40px;
 }
+
 
 .timeline-heart {
     width: 50px;
+
     height: 50px;
+
     min-width: 50px;
 
     background: white;
@@ -665,7 +681,9 @@ h1 {
     border-radius: 50%;
 
     display: flex;
+
     align-items: center;
+
     justify-content: center;
 
     font-size: 25px;
@@ -677,12 +695,14 @@ h1 {
     z-index: 2;
 }
 
+
 .timeline-content {
-    background: rgba(255,255,255,0.95);
+    background:
+        rgba(255,255,255,0.95);
 
     padding: 20px;
 
-    border-radius: 18px;
+    border-radius: 20px;
 
     box-shadow:
         0 5px 18px
@@ -691,23 +711,33 @@ h1 {
     flex: 1;
 }
 
+
 .timeline-date {
     color: #d6336c;
+
     font-size: 14px;
+
     font-weight: bold;
 }
 
+
 .timeline-content h3 {
     color: #444;
+
     margin: 8px 0;
+
     font-size: 21px;
 }
 
+
 .timeline-content p {
     color: #666;
+
     line-height: 1.7;
-    margin: 0;
+
+    margin-bottom: 15px;
 }
+
 
 /* =========================
    MEMORY BOX
@@ -729,6 +759,7 @@ h1 {
     animation: fadeIn 0.8s;
 }
 
+
 .memory-box h4 {
     color: #d6336c;
 
@@ -737,11 +768,13 @@ h1 {
     margin: 20px 0 10px;
 }
 
+
 .memory-box p {
     color: #666;
 
     line-height: 1.8;
 }
+
 
 .memory-box strong {
     color: #d6336c;
@@ -749,14 +782,37 @@ h1 {
     font-size: 17px;
 }
 
+
+/* =========================
+   MEMORY PHOTO
+   ========================= */
+
 .memory-photo {
     width: 100%;
 
-    min-height: 220px;
-
     border-radius: 18px;
 
+    overflow: hidden;
+
     background: #ffe3ec;
+
+    text-align: center;
+}
+
+
+.memory-photo img {
+    width: 100%;
+
+    max-height: 500px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+.photo-placeholder {
+    min-height: 220px;
 
     display: flex;
 
@@ -764,22 +820,22 @@ h1 {
 
     justify-content: center;
 
-    flex-direction: column;
-
-    font-size: 55px;
+    font-size: 60px;
 
     color: #d6336c;
-
-    border: 2px dashed #ffb6c1;
 }
 
+
 .memory-photo span {
+    display: block;
+
+    padding: 12px;
+
     font-size: 14px;
 
     color: #999;
-
-    margin-top: 8px;
 }
+      
 
 /* =========================
    LOVE LETTER
@@ -1303,8 +1359,9 @@ I love you, Muu.
     <h2>Our Story ❤️</h2>
 
     <p class="story-intro">
-        Some dates are just dates...
-        but these dates are pieces of our story. ❤️
+        Four dates.
+        Four beautiful memories.
+        One story that became ours. ❤️
     </p>
 
 
@@ -1312,7 +1369,100 @@ I love you, Muu.
 
 
         <!-- =========================
-             AUGUST 28, 2023
+             FIRST OUTING
+             ========================= -->
+
+        <div class="timeline-item">
+
+            <div class="timeline-heart">
+                🌱
+            </div>
+
+            <div class="timeline-content">
+
+                <span class="timeline-date">
+                    June 11, 2023
+                </span>
+
+                <h3>
+                    Our First Outing 🌱
+                </h3>
+
+                <p>
+                    We were friends then.
+
+                    We didn't know where life would
+                    take us or what this friendship
+                    would eventually become.
+
+                    But this was one of the first
+                    little memories that became part
+                    of our story. ❤️
+                </p>
+
+                <button onclick="openMemory('memoryFirstOuting')">
+                    💌 Open Our Memory ❤️
+                </button>
+
+
+                <div id="memoryFirstOuting"
+                     class="memory-box">
+                    
+                    <div class="memory-photo">
+                  
+                      <img
+                          src="images/engagement.jpg"
+                          alt="Our Engagement"
+                      >
+                  
+                    </div>
+
+                          
+                        <span>
+                            Our First Outing
+                        </span>
+
+                    </div>
+
+                    <h4>
+                        June 11, 2023 🌱❤️
+                    </h4>
+
+                    <p>
+                        Our first outing together.
+
+                        We were just friends at that time,
+                        simply enjoying a day together.
+
+                        We had no idea that this little
+                        outing would eventually become one
+                        of the memories in the story of us.
+                    </p>
+
+                    <p>
+                        Looking back now, it feels
+                        a little more special...
+
+                        because I know where our story
+                        eventually took us. ❤️
+                    </p>
+
+                    <strong>
+                        Just friends then...
+                        but something beautiful was
+                        waiting ahead. ❤️
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- =========================
+             LOVE STORY BEGINS
              ========================= -->
 
         <div class="timeline-item">
@@ -1328,59 +1478,67 @@ I love you, Muu.
                 </span>
 
                 <h3>
-                    The Day Our Story Began ❤️
+                    The Day Our Love Story Began 💕
                 </h3>
 
                 <p>
-                    The beginning of us...
+                    Somewhere along the way,
+                    friendship became love.
                 </p>
 
-                <button onclick="openMemory('memory2023')">
+                <button onclick="openMemory('memoryLoveStory')">
                     💌 Open Our Memory ❤️
                 </button>
 
 
-                <div id="memory2023"
+                <div id="memoryLoveStory"
                      class="memory-box">
 
                     <div class="memory-photo">
-                        📸
-                        <br>
+
+                        <div class="photo-placeholder">
+                            ❤️
+                        </div>
+
                         <span>
-                            Our first memory
+                            The Beginning Of Us
                         </span>
+
                     </div>
 
                     <h4>
-                        August 28, 2023 ❤️
+                        August 28, 2023 💕
                     </h4>
 
                     <p>
-                        This is where our story began.
+                        This is the date that became
+                        so special to us.
 
-                        What started as two people
-                        became something much more
-                        beautiful.
+                        Our friendship slowly became
+                        something more beautiful.
 
-                        From that day, we started creating
-                        memories, sharing laughs, supporting
-                        each other and slowly building
-                        our little world together.
-
-                        I didn't know exactly where our
-                        journey would take us...
-
-                        but I'm so happy it brought me
-                        to you. ❤️
+                        And from this day, our journey
+                        together began.
                     </p>
 
                     <p>
-                        And if I could go back to that day,
-                        I would still choose you.
+                        We didn't know everything that
+                        was waiting for us ahead.
+
+                        We didn't know about the
+                        engagement, the wedding,
+                        or all the memories we would
+                        create together.
+                    </p>
+
+                    <p>
+                        We only knew that we wanted
+                        each other. ❤️
                     </p>
 
                     <strong>
-                        Always you, Muu. ❤️
+                        And that was the beginning
+                        of our story. ❤️
                     </strong>
 
                 </div>
@@ -1392,7 +1550,7 @@ I love you, Muu.
 
 
         <!-- =========================
-             APRIL 6, 2026
+             ENGAGEMENT
              ========================= -->
 
         <div class="timeline-item">
@@ -1412,7 +1570,8 @@ I love you, Muu.
                 </h3>
 
                 <p>
-                    The day our forever became even more real.
+                    A beautiful new chapter
+                    in our journey together.
                 </p>
 
                 <button onclick="openMemory('memoryEngagement')">
@@ -1424,11 +1583,12 @@ I love you, Muu.
                      class="memory-box">
 
                     <div class="memory-photo">
-                        📸
-                        <br>
-                        <span>
-                            Our Engagement Photo
-                        </span>
+
+                        <img
+                            src="images/engagement.jpg"
+                            alt="Our Engagement"
+                        >
+
                     </div>
 
                     <h4>
@@ -1436,31 +1596,30 @@ I love you, Muu.
                     </h4>
 
                     <p>
-                        This was such a special day for us.
-
                         After everything we had shared,
-                        we took another beautiful step
-                        towards our future together.
-
-                        Seeing you beside me that day
-                        made everything feel real.
-
-                        Our relationship wasn't just about
-                        yesterday anymore...
-
-                        We were getting ready to build
-                        our tomorrow together. ❤️
+                        we reached another beautiful
+                        chapter in our journey.
                     </p>
 
                     <p>
-                        One promise.
+                        Our engagement wasn't just
+                        about one special day.
 
-                        One beautiful beginning
-                        to our forever.
+                        It was a promise of everything
+                        that was waiting for us ahead.
+                    </p>
+
+                    <p>
+                        A future together.
+
+                        A life together.
+
+                        And eventually...
+                        our forever. ❤️
                     </p>
 
                     <strong>
-                        My fiancé then,
+                        My fiancé then...
                         my husband now. ❤️
                     </strong>
 
@@ -1473,7 +1632,7 @@ I love you, Muu.
 
 
         <!-- =========================
-             MAY 28, 2026
+             WEDDING
              ========================= -->
 
         <div class="timeline-item">
@@ -1489,7 +1648,7 @@ I love you, Muu.
                 </span>
 
                 <h3>
-                    The Day We Became One 💍❤️
+                    The Day We Became One 👰❤️
                 </h3>
 
                 <p>
@@ -1505,11 +1664,12 @@ I love you, Muu.
                      class="memory-box">
 
                     <div class="memory-photo">
-                        📸
-                        <br>
-                        <span>
-                            Our Wedding Photo
-                        </span>
+
+                        <img
+                            src="images/wedding.jpg"
+                            alt="Our Wedding"
+                        >
+
                     </div>
 
                     <h4>
@@ -1519,27 +1679,33 @@ I love you, Muu.
                     <p>
                         Our wedding day.
 
-                        A day we had dreamed about,
-                        waited for and finally got to live.
-
-                        From being two people with a story...
-
-                        to becoming husband and wife.
-
-                        I will always remember the feeling
-                        of that day and the happiness of
-                        starting this new chapter with you.
+                        A day we had waited for,
+                        dreamed about, and finally
+                        got to live.
                     </p>
 
                     <p>
-                        Our story didn't end here.
+                        We started as friends.
 
-                        This was only the beginning
-                        of our forever. ❤️
+                        We became partners.
+
+                        We became engaged.
+
+                        And then we became
+                        husband and wife. ❤️
+                    </p>
+
+                    <p>
+                        But our wedding wasn't the
+                        end of our story.
+
+                        It was the beginning of
+                        our forever.
                     </p>
 
                     <strong>
                         Husband & Wife.
+                        <br>
                         Always and forever. ❤️
                     </strong>
 
@@ -1552,7 +1718,7 @@ I love you, Muu.
 
 
         <!-- =========================
-             NOVEMBER 23, 2026
+             BIRTHDAY
              ========================= -->
 
         <div class="timeline-item">
@@ -1572,7 +1738,14 @@ I love you, Muu.
                 </h3>
 
                 <p>
-                    The day the person I love was born.
+                    And now comes another
+                    beautiful date in our story —
+                    your birthday.
+                </p>
+
+                <p>
+                    This time, I get to celebrate
+                    the birthday of my husband. ❤️
                 </p>
 
             </div>
@@ -1582,6 +1755,9 @@ I love you, Muu.
 
     </div>
 
+</section>
+
+      
 <!-- =========================
      LOVE LETTER
      ========================= -->
@@ -2191,6 +2367,7 @@ function openMemory(memoryId) {
 
     const memory =
         document.getElementById(memoryId);
+
 
     if (memory.style.display === "block") {
 
